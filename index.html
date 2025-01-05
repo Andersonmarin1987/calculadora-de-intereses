@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Intereses</title>
+  <script>
+    function calcularIntereses() {
+      var monto = document.getElementById("monto").value;
+      var porcentaje = document.getElementById("porcentaje").value;
+      var intereses = (monto * (porcentaje / 100)).toFixed(2);
+      document.getElementById("resultado").innerHTML = "El interés a pagar es: $" + intereses;
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Intereses</h1>
+  <form>
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" name="monto"><br><br>
+    <label for="porcentaje">Porcentaje:</label>
+    <input type="number" id="porcentaje" name="porcentaje" step="0.01"><br><br>
+    <input type="button" value="Calcular" onclick="calcularIntereses()">
+  </form>
+  <p id="resultado"></p>
+</body>
+</html>
